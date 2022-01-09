@@ -13,7 +13,7 @@ headers = {
     'X-CMC_PRO_API_KEY': '52da5bee-2bbc-49e0-b837-9544f2cacc60',
 }
 
-delevery_cost = 20 #delevery cost
+deleviry_cost = 20 #delivery cost
 
 session = Session()
 session.headers.update(headers)
@@ -27,8 +27,8 @@ def get_price_ADA_USD(delevery_cost):
     for x in crypto:
         if x['symbol'] == 'ADA':
             price = x['quote']['USD']['price']
-    return round(delevery_cost / price, 2)
+    return round(deleviry_cost / price, 2)
 
-print(get_price_ADA_USD(delevery_cost), 'ADA')
+print(get_price_ADA_USD(delivery_cost), 'ADA')
 
     
